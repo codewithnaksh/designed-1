@@ -1,0 +1,184 @@
+:root{
+    --primary-color: #cb6be6;
+    --secondary-color: #f2f2f2;
+    --tertiary-color: #333;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+header{
+    background-color: var(--secondary-color);
+    padding: 0.521vw 0;
+    text-align: center;
+    width: 100%;
+    user-select: none;
+}
+header h1{
+    font-size: 2vw;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    display: inline-block;
+    padding: 0.5vw 3vw;
+    border-radius: 0.5vw;
+    margin: 1vw 0;
+}
+header p{
+    font-size: 1vw;
+    line-height: 1.4vw;
+    color: var(--tertiary-color);
+    width: 70%;
+    margin: auto;
+}
+#horizontalRule{
+    width: 50%;
+    margin: 2vw auto;
+    border: 1px dashed var(--primary-color);
+}
+header h2{
+    font-size: 1.5vw;
+    color: var(--tertiary-color);
+    user-select: none;
+}
+section{
+    width: 100%;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3vw;
+}
+section h3{
+    font-size: 1vw;
+    margin-top: 2vw;
+    margin-bottom: 1vw;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    display: inline-block;
+    padding: 0.5vw 1vw;
+    border-radius: 0.5vw;
+    font-weight: 400;
+    user-select: none;
+}
+section .profiles{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+    gap: 1vw;
+    flex-flow: wrap-reverse;
+}
+.profile{
+    width: 20%;
+    margin: 1vw 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile img{
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50% !important;
+    overflow: hidden;
+    border-radius: 0.5vw;
+    transition: transform 0.5s ease;
+}
+/* hover to zoom image */
+.profile img:hover{
+    transform: scale(1.1);
+}
+.profile h4{
+    font-size: 1vw;
+    text-align: center;
+}
+/* on selection by the user the color should be --primary-color */
+.profile h4::selection{
+    color: var(--primary-color);
+}
+.profile p{
+    color: var(--primary-color);
+    opacity: 0.5;
+    text-align: center;
+    font-size: 0.8vw;
+}
+.profile p::selection{
+    color: var(--tertiary-color);
+}
+section:nth-child(2) .profiles{
+    flex-flow: wrap;
+}
+section:nth-child(3) .profiles{
+    flex-flow: wrap;
+}
+@media screen and (max-width: 768px){
+    header h1{
+        font-size: 5vw;
+    }
+    header p{
+        width: 90%;
+        font-size: 2vw;
+        line-height: 2.3vw;
+    }
+    header h2{
+        font-size: 3.5vw;
+    }
+    section h3{
+        font-size: 2vw;
+    }
+    section .profiles{
+        width: 90%;
+    }
+    .profile{
+        width: 40%;
+    }
+    .profile img{
+        width: 20vw;
+        height: 20vw;
+    }
+    .profile h4{
+        font-size: 2.5vw;
+    }
+    .profile p{
+        font-size: 1.5vw;
+    } 
+}
+
+@media screen and (max-width: 425px){
+    header h1{
+        font-size: 5vw;
+    }
+    header p{
+        width: 90%;
+        font-size: 2vw;
+        line-height: 2.3vw;
+    }
+    header h2{
+        font-size: 3.5vw;
+    }
+    section h3{
+        font-size: 2vw;
+    }
+    section .profiles{
+        width: 90%;
+    }
+    .profile{
+        width: 40%;
+    }
+    .profile img{
+        width: 20vw;
+        height: 20vw;
+    }
+    .profile h4{
+        font-size: 2.5vw;
+    }
+    .profile p{
+        font-size: 1.5vw;
+    }
+}
